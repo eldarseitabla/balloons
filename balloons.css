@@ -33,3 +33,21 @@ h2, h3, h4 {
 ul {
     list-style-type: square;
 }
+
+.introduction {
+    font-size: 1.5em;
+    color: #72005f;
+    font-style: italic;
+}
+
+a:link {
+    color: #660099;
+}
+
+a:visited {
+    color: #876399;
+}
+
+a:hover {
+    color: #339900;
+}
