@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="balloons.css">
     <title>Contact Us</title>
 </head>
+
 <body>
     <ul class="navigation">
         <li><a href="index.html">Home</a></li>
@@ -16,6 +18,29 @@
     </ul>
     <h1>Contact Us</h1>
     <p class="introduction">This is some text contact us.</p>
-    <p>Please feel free to <a href="mailto:balloons@example.com">send us an email</a> if you would like to know more about our products.</p>
+    <p>Please feel free to <a href="mailto:balloons@example.com">send us an email</a> if you would like to know more
+        about our products.</p>
+    <form action="process.php">
+        <div class="form-control">
+            <label for="firstName">First name</label>
+            <input id="firstName" type="text" name="First name" />
+        </div>
+        <div class="form-control">
+            <label for="lastName">Last name</label>
+            <input id="lastName" type="text" name="Last name" />
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="Email" />
+        </div>
+        <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        </div>
+        <div class="form-control">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
 </body>
+
 </html>

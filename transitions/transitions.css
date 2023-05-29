@@ -1,0 +1,55 @@
+/* These rules are just to make the page look presentable */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 2em;
+}
+.transition-links,
+.transition-classes {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transition-classes {
+    flex-direction: column;
+}
+
+/* These rules are the ones we are interested in */
+
+/* 1. Transitioning when user hovers on a link */
+
+/* Base style for the link */
+/* Note, when no pseudo-class is specified, styles apply to links in all states (link, hover, active, etc.) */
+a {
+    font-size: 2em;
+    padding: 3em;
+    text-decoration: none;
+    color: #000;
+    background-color: #FF944D;
+    border-radius: 8px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Style for the link when hovered */
+a:hover {
+    background-color: #D65600;
+    color: #fff;
+}
+
+/* 2. Transitioning triggered by JavaScript */
+.target {
+    padding: 3em;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 2em;
+    background-color: #4B1871;
+    transition: background-color 1s ease-in-out, font-size 1s ease-in-out;
+}
+.active-target {
+    font-size: 3em;
+    background-color: #8A2DD2;
+}
