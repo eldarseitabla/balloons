@@ -31,13 +31,17 @@ a {
     color: #000;
     background-color: #FF944D;
     border-radius: 8px;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    /* transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; */
+    transition: transform 1s, opacity 1s;
+    cursor: pointer;
 }
 
 /* Style for the link when hovered */
 a:hover {
     background-color: #D65600;
-    color: #fff;
+    /* color: #fff; */
+    transform: scale(2);
+    opacity: 0;
 }
 
 /* 2. Transitioning triggered by JavaScript */
@@ -47,9 +51,9 @@ a:hover {
     border-radius: 16px;
     font-size: 2em;
     background-color: #4B1871;
-    transition: background-color 1s ease-in-out, font-size 1s ease-in-out;
+    transition: background-color 1s ease-in-out, font-size 2s ease-in-out;
 }
 .active-target {
-    font-size: 3em;
+    font-size: 4em;
     background-color: #8A2DD2;
 }
