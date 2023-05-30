@@ -1,0 +1,147 @@
+/* Base styles - inherited by everything */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #600B14;
+    background-color: #EC8F30;
+}
+
+.page-container {
+    width: 90%;
+    padding: 0.5em;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+/* Make the h1 look like a banner */
+h1 {
+    color: #fdf2d1;
+    font-size: 2em; /* 32px by default (16 x 2 = 32) */
+    font-weight: 400;
+    background-color: #500911;
+    padding: 0.5em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Remove space above H2 elements */
+h2 {
+    margin-top: 0;
+}
+
+/* Style the navigation bar and links */
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #00315e;
+    flex-direction: column;
+}
+.navigation a {
+    text-decoration:none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    padding: 0.75em 1em;
+}
+.navigation a:hover {
+    background-color: #00488d;
+}
+
+@media (min-width: 37.5em) {
+    .navigation {
+        flex-direction: row;
+    }
+}
+
+/*
+   Style the <footer> element
+   We can set the font-size, color and text-align properties here
+   and they will be inherited by elements contained within the <footer>
+ */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #0061BD;
+    color: #fefefe;
+    padding: 1em;
+    font-size: 0.875em; /* 14px  by default (16 x 0.875 = 14) */
+}
+
+footer .footer {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* +++ Everything below this comment is for the exercise +++ */
+
+
+/* This rule is for the <div> that encloses the whole page */
+.page-container {
+    box-sizing: border-box;
+}
+
+/* This rule is for the main content of the page */
+main {
+    /*padding: 2em 0;*/
+    padding: 1em 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2em; /* Make space between the columns */
+    box-sizing: border-box;
+}
+/*37.5em*/
+@media (min-width: 37.5em) {
+    main {
+        /*display: grid;*/
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 37.5em) {
+    nav ul {
+        display: flex;
+    }
+}
+
+.article {
+}
+
+/* This grouped selector rule applies to both of the "regions" */
+.html-feature,
+.css-feature {
+    padding: 1em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+/* This rule is for the HTML article */
+.html-feature {
+    background-color: #0679e4; /* pale peach/orange */
+}
+
+/* This rule is for the CSS article */
+.css-feature {
+    background-color: #f7eb06; /* pale yellow */
+}
+
+/* printer-friendly version */
+@media print {
+    body, .page-container {
+        background-color: white;
+        color: black;
+    }
+
+    a {
+        color: blue;  /* typically, links are blue in print */
+    }
+
+    nav, footer {
+        display: none;
+    }
+
+    main {
+        display: block;  /* This will make the HTML and CSS articles sit one on top of the other */
+    }
+}
